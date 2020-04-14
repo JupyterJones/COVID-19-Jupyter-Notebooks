@@ -1,9 +1,11 @@
 """
 Month2Num(month)
 span(timestamp1, timestamp2): This will show the span in hours between two timestamps.
-
+Date = "April 09 2020 10:00:00"
+DateEpoch(Date)
 """
 from __future__ import division
+import time 
 def Month2Num(month):
     number=""
     months=["January","February","March","April","May","June","July",\
@@ -28,3 +30,25 @@ def span(timestamp1, timestamp2):
     res =SPAN/3600
     result = round(res,2)
     return result
+
+def DateEpoch(Date):
+    dt = time.strftime(Date)
+    Date= Date.replace(",",'')
+    DATE = Date.split(" ")
+    date_ti = DATE[1]+"/"+Month2Num(DATE[0])+"/"+DATE[2]+" "+DATE[3]#[:-3]
+    #03-16-2020 02:48,3777
+    pattern = '%d/%m/%Y %H:%M:%S'
+    timestamp = int(time.mktime(time.strptime(date_ti, pattern)))
+    return timestamp
+
+def Date2Epoch(Date,last=1583621400):
+    dt = time.strftime(Date)
+    Date= Date.replace(",",'')
+    DATE = Date.split(" ")
+    #print(DATE[0],DATE[1],DATE[2],DATE[3])
+    date_ti = DATE[1]+"/"+Month2Num(DATE[0])+"/"+DATE[2]+" "+DATE[3]#[:-3]
+    #03-16-2020 02:48,3777
+    pattern = '%d/%m/%Y %H:%M:%S'
+    epochs = int(time.mktime(time.strptime(date_ti, pattern)))
+    Epoch = (date_ti, epochs,span(int(last),int(epochs)))
+    return Epoch
