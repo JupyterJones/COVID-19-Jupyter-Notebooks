@@ -5,13 +5,10 @@
 2019 Novel Coronavirus COVID-19 (2019-nCoV) Data Repository by Johns Hopkins CSSE<br>
 This repository contains Jupyter Notebooks and tools to visualize the CoronVirus COVID-19 data from Data Repository by Johns Hopkins CSSE:
 It also includes notbooks to visualize data from my Website: https://mylinuxtoybox.com/COVID-19/index.php
+
+
+To use COVID-1- Data, "git" the repository https://github.com/CSSEGISandData/COVID-19 ousit of this directory. Do NOT create the repository inside of this repository.  Then make it available to this repository by creating a symlink. Then you can update data simpily by going in the COVID-19 directory and entering "git pull" . The symlink here, will of course automatically update.
  
-
-
-
-
-
-
 REFERENCES:<br>
 This is the data repository for the 2019 Novel Coronavirus Visual Dashboard operated by the Johns Hopkins University Center for Systems Science and Engineering (JHU CSSE). Also, Supported by ESRI Living Atlas Team and the Johns Hopkins University Applied Physics Lab (JHU APL).
 <br>
