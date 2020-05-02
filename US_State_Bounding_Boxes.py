@@ -1,5 +1,5 @@
 """
-Usage with basemape: 
+Usage with basemap: 
 The plus and minus .5 adds about a 35 mile padding to the mapbox:
 from US_State_Bounding_Boxes import GetCOOR
 search="Ohio"
@@ -90,12 +90,12 @@ def GetCOOR(state):
     STATElist=DATA.split("\n")
     for States in STATElist:
         if state in States:
-            States = States.replace("  "," ")
-            States = States.split(" ")
-            urcrnrlat = float(States[4])
-            llcrnrlat = float(States[2])
-            urcrnrlon = float(States[3])
-            llcrnrlon = float(States[1])
+            Statez = States.split("  ")
+            StateS = Statez[1].split(" ")
+            urcrnrlat = float(StateS[3])
+            llcrnrlat = float(StateS[1])
+            urcrnrlon = float(StateS[2])
+            llcrnrlon = float(StateS[0])
             return urcrnrlat,llcrnrlat,urcrnrlon,llcrnrlon
 
 def COOR(state):
