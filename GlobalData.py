@@ -244,6 +244,7 @@ DATA=[['Country,UN Continental,Unstatistical,Population-2018,Population-2019,Pop
 ['Ukraine,Europe,Eastern Europe,44246156,43993638,−0.57%'],
 ['United Arab Emirates,Asia,Western Asia,9630959,9770529,+1.45%'],
 ['United States,Americas,Northern America,327096265,329064917,+0.60%'],
+['US,Americas,Northern America,327096265,329064917,+0.60%'],      
 ['Uruguay,Americas,South America,3449285,3461734,+0.36%'],
 ['Uzbekistan,Asia,Central Asia,32476244,32981716,+1.56%'],
 ['Vanuatu,Oceania,Melanesia,292680,299882,+2.46%'],

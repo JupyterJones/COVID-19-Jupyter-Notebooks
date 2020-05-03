@@ -1,0 +1,13 @@
+Help on function filesearch in module FileSearch:
+
+filesearch(search, filename, Range=8)
+    #!/usr/bin/env -m python
+    #Searches a file enter search term and filename
+    #Range is to give context before and after the search term.
+    #It defaults to eight lines before the word and eight lines after.
+    #USAGE:
+    #from FileSearch import filesearch                
+    #search ="urcrnrlat"
+    #filename = "basemap.help"
+    #filesearch(search,filename,Range=2)
+

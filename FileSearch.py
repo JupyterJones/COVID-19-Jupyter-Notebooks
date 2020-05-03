@@ -1,15 +1,12 @@
 #!/usr/bin/env -m python
-"""
-Searches a file enter search term and filename
-Range is to give context before and after the search term.
-It defaults to eight lines before the word and eight lines after.
-USAGE:
-from FileSearch import filesearch                
-search ="urcrnrlat"
-filename = "basemap.help"
-filesearch(search,filename,Range=2)
-
-"""
+#Searches a file enter search term and filename
+#Range is to give context before and after the search term.
+#It defaults to eight lines before the word and eight lines after.
+#USAGE:
+#from FileSearch import filesearch                
+#search ="urcrnrlat"
+#filename = "basemap.help"
+#filesearch(search,filename,Range=2)
 def filesearch(search,filename, Range=8):
     cnt=0
     oldcount = -8
@@ -28,5 +25,6 @@ def filesearch(search,filename, Range=8):
             line=view.replace("\n","")
             for content in INDEX:
                 if cnt > int(content[1]) and cnt < int(content[2]):
-                    print(cnt,line)
+                    if search not in line:print(cnt,line)
                     if cnt==int(content[2]-1):print("-----------")  
+                    if search in line:print("\nSEARCHTERM>> ",cnt,line,"\n") 
