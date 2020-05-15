@@ -1,32 +1,3 @@
-"""
-Usage with basemap: 
-The plus and minus .5 adds about a 35 mile padding to the mapbox:
-from US_State_Bounding_Boxes import GetCOOR
-search="Ohio"
-coor= GetCOOR(search)
-urcrnrlat = coor[0]+.5
-llcrnrlat = coor[1]-.5
-urcrnrlon = coor[2]+.5
-llcrnrlon = coor[3]-.5
-m = Basemap(llcrnrlon,llcrnrlat,urcrnrlon,urcrnrlat,
-             resolution='i', projection='tmerc', lat_0 = lat_0, lon_0 = lon_0)
-
-state="Florida"
-COOR(state)
->>> ('Florida', '-87.634938 24.523096 -80.031362 31.000888')
-or:
-state="Florida"
-x=COOR(state)[0]
-coor=COOR(state)[1]
-print(x,coor)
->>> Florida -87.634938 24.523096 -80.031362 31.000888
-st = COOR(state)
-print (st[0])
->>> Florida
-print (st[1])
->>> -87.634938 24.523096 -80.031362 31.000888
-"""
-
 DATA="""
 NAME  xmin ymin xmax ymax
 Alabama  -88.473227 30.223334 -84.88908 35.008028
@@ -90,12 +61,12 @@ def GetCOOR(state):
     STATElist=DATA.split("\n")
     for States in STATElist:
         if state in States:
-            Statez = States.split("  ")
-            StateS = Statez[1].split(" ")
-            urcrnrlat = float(StateS[3])
-            llcrnrlat = float(StateS[1])
-            urcrnrlon = float(StateS[2])
-            llcrnrlon = float(StateS[0])
+            States = States.split("  ")[-1]
+            States = States.split(" ")
+            urcrnrlat = float(States[3])
+            llcrnrlat = float(States[1])
+            urcrnrlon = float(States[2])
+            llcrnrlon = float(States[0])
             return urcrnrlat,llcrnrlat,urcrnrlon,llcrnrlon
 
 def COOR(state):

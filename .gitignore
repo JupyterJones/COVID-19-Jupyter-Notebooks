@@ -1,2 +1,13 @@
 COVID-19/
 OldData/
+BaseMap/
+images/
+csv
+ShapeFiles
+__pycache__/
+state-data/
+_notebooks/
+mouse-sizing-n-cropping-files/
+HelpFiles/
+DATA/
+examples/
